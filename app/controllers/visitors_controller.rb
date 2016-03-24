@@ -1,5 +1,11 @@
 class VisitorsController < ApplicationController
   def index
-    @products = Product.all
+    if params[:sort] == 'alphabetical'
+      @products = Product.alphabetical
+    elsif params[:sort] == 'totaldiscount'
+      @products = Product.totaldiscount
+    else
+      @products = Product.all
+    end
   end
 end

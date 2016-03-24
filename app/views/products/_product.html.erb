@@ -3,11 +3,14 @@
         <%= image_tag product.image_path %>
         <div class="caption">
             <h4 class="pull-right"><%= product.price_vnd %></h4>
-            <h4><a href="#"><%= product.name %></a>
+
+          <h4><a href="#"><%= product.name %></a>
             </h4>
             <p><%= product.description %></p>
         </div>
-        <div class="ratings">
+      <h6 class="pull-right"><%= product.get_saleoff_text %></h6>
+
+      <div class="ratings">
             <p class="pull-right">15 reviews</p>
             <p>
                 <span class="glyphicon glyphicon-star"></span>
